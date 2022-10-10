@@ -1,6 +1,6 @@
 //******************************************************************************
 // A4_Singh.java
-// Author: Karanbir Singh 100397449
+// Author: Karanbir Singh 
 // A GUI program using JavaFX. This program allows the user to select toppings
 // for a pizza order. The user can add a 10% tip if he want. The total price
 // of the pizza with/without toppings will be calculated and shown.
