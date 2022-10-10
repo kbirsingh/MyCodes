@@ -1,1 +1,1 @@
-# Band Bootstrap Tempelate
+# Band Bootstrap Template
