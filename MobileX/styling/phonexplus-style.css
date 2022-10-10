@@ -1,0 +1,225 @@
+/*phone-x plus page*/
+
+body {
+    margin:0;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 22px 30px;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+/*Product Detail Page Style*/
+.product-detail{
+    display: inline-block;
+    margin-top: 40px;
+	float: left;
+	width: 100%;
+	padding-top: 45px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.product-detail h3{
+	font-size: 24px;
+	padding: 15px 0;
+}
+
+.product-detail-left{
+	float: left;
+	width: 44%;
+}
+
+/* Style the images inside the grid */
+/* The expanding image container */
+.container {
+    float: left;
+    width: 80%;
+}
+
+/* The grid: Four equal columns */
+.row {
+    float: left;
+    width: 18%;
+}
+
+.column {
+    width: 100%;
+    padding: 5px 15px;
+}
+
+.column img {
+    opacity: 0.8; 
+    cursor: pointer; 
+    width: 100%;
+    height: 100px;
+    border: 2px solid black;
+}
+
+.column img:hover {
+    opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  
+}
+
+.product-detail-right{
+	float: right;
+	width: 55%;
+}
+
+.product-detail-right h3{
+	font-size: 22px;
+	line-height: 24px;
+	padding-top: 0;
+}
+
+.product-detail-right h3 small{
+	font-size: 16px;
+	color: gray;
+}
+
+.product-detail-right h5{
+	font-size: 18px;
+	margin-bottom: 20px;
+	color: gray;
+}
+
+.product-detail-right h5 b{
+	color: #000;
+}
+
+.product-detail-right .buynow{
+	border: 1px solid #ffa800;
+	background-color: #ffa800;
+	color: #fff;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-decoration: none;
+	padding: 15px 25px;
+	border-radius: 4px;
+	margin-top: 20px;
+	width: 60%;
+	text-align: center;
+	display: inline-block;
+}
+
+.product-detail-right .buynow:hover {
+    background-color: forestgreen;
+}
+
+.product-detail-feature{
+	width: 100%;
+	float: left;
+	display: inline-block;
+	margin-top: 5px;
+	padding: 10px;
+	background-color: #ffbe69;
+}
+
+.product-detail-feature h3{
+	font-weight: bolder;
+	border-bottom: 3px solid;
+    font-size: 40px;
+}
+
+.product-detail-feature p{
+	padding: 10px 0;
+	font-size: 18px;
+	border-bottom: 2px solid white;
+	width: 50%;
+	float: left;
+}
+
+/*styling the footer section*/
+.footer {
+    float: left;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 30px 20px 30px;
+    color: #2f2f2f;
+    background-color: black;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 6px;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.footer > * {
+    flex:  1 100%;
+}
+
+.nav__title {
+    font-weight: 400;
+    font-size: 27px;
+    color: white
+}
+
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer li {
+    line-height: 2em;
+}
+
+.footer a {
+    text-decoration: none;
+    font-size: 19px;
+}
+
+.footer__nav {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.footer__nav > * {
+    flex: 1 50%;
+    margin-right: 1.25em;
+}
+
+.nav__ul a {
+    color: #999;
+}
+
+.nav__ul a:hover {
+    color: white;
+}
+
+@media screen and (min-width: 40.375em) {
+    .footer__nav > * {
+    flex: 1;
+  }
+}
+
+

@@ -1,0 +1,325 @@
+/*Main Index page*/
+
+body {
+    margin:0;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 22px 30px;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* style the main top image*/
+.top_image{
+    margin: 0; 
+    padding: 0;
+    border: 2px solid;
+    float: left;
+    width: 99%;
+    margin-left: 0.5%;
+    margin-top: 75px;
+}
+
+/* style of new products section */
+.new_products {
+    margin-top: 5px;
+    background-color: firebrick;
+    float: left;
+    width: 100%;
+}
+
+/* style the cards created in new product section */
+.card1 {
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    max-width: 350px;
+    float: left;
+    text-align: center;
+    font-family: arial;
+    background-color: black;
+    color: white;
+    margin-left: 70px;
+    margin-bottom: 5%;
+}
+
+/* Change the color of price of products in new products section*/
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+/* style the button present at bottom of the card */
+.card1 button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: black;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+/* change the background color and font color of card button on hover */
+.card1 button:hover {
+    background-color: red;
+    color: yellow;
+}
+
+/* styling rows and columns to create image grid */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.column {
+    flex: 32.5%;
+    max-width: 32.5%;
+    padding: 20px;
+}
+
+.column img {
+    margin-top: 20px;
+    vertical-align: middle;
+    width: 100%;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+}
+
+.column img:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+/* style of image grid section */
+.image_grid {
+    margin-top: 5px;
+    background-color: #2d3d8a;
+    float: left;
+    width: 100%;
+}
+
+/* style of popular products section */
+.popular_products {
+    margin-top: 5px;
+    background-color: firebrick;
+    float: left;
+    width: 100%;
+}
+
+/* style of cards in popular products section */
+.card2 {
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    max-width: 350px;
+    float: left;
+    text-align: center;
+    font-family: arial;
+    background-color: darkcyan;
+    color: white;
+    margin-bottom: 5%;
+}
+
+.card2:hover {
+    -webkit-box-shadow: 10px 10px 5px 8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 8px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 8px rgba(0,0,0,0.75);
+    background-color: orange;
+}
+
+/* style the store button present in popular section */
+.visit_store button {
+    margin: auto;
+    content: "";
+    display: table;
+    clear: both;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    width: 150px;
+    font-size: 20px;
+    border-radius: 10%;
+}
+
+.visit_store button:hover{
+    background-color: gray;
+    color: black;
+    font-weight: bolder;
+}
+
+/* style of about products section */
+.about_products {
+    margin-top: 5px;
+    background-color: #2d3d8a;
+    float: left;
+    width: 100%;
+}
+
+/* Create two equal columns that floats next to each other */
+.about_column {
+    float: left;
+    height: 300px;
+    color: white;
+    background-color: black;
+    border-radius: 10%;
+    overflow: hidden;
+    margin-top: 5%;
+}
+
+/* Clear floats after the columns */
+.about_row1:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.about_row2:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.about_row3:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.about_column button {
+    outline: 0;
+    padding: 5px;
+    color: black;
+    background-color: coral;
+    text-align: center;
+    cursor: pointer;
+    width: 200px;
+    font-size: 18px;
+    border-radius: 12px;
+}
+
+.about_column button:hover{
+    background-color: chartreuse;
+}
+
+/* Styling the section where we show what other companies have to say abous us*/
+.companies_comments{
+    width: 100%;
+    margin-top: 5px; 
+    float: left;
+    background-color: firebrick;
+}
+
+.comment-area {
+    display: flex;
+    justify-content: center;
+}
+
+.comment-area > div {
+    background-color: #f1f1f1;
+    width: 450px;
+    margin: 10px;
+    line-height: 75px;
+    font-size: 30px;
+    border: 4px solid black;
+}
+
+/*styling the footer section*/
+.footer {
+    float: left;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 30px 20px 30px;
+    color: #2f2f2f;
+    background-color: black;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 5px;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.footer > * {
+    flex:  1 100%;
+}
+
+.nav__title {
+    font-weight: 400;
+    font-size: 27px;
+    color: white
+}
+
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer li {
+    line-height: 2em;
+}
+
+.footer a {
+    text-decoration: none;
+    font-size: 19px;
+}
+
+.footer__nav {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.footer__nav > * {
+    flex: 1 50%;
+    margin-right: 1.25em;
+}
+
+.nav__ul a {
+    color: #999;
+}
+
+.nav__ul a:hover {
+    color: white;
+}
+
+@media screen and (min-width: 40.375em) {
+    .footer__nav > * {
+    flex: 1;
+  }
+}
+
+
+
