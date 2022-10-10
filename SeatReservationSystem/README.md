@@ -1,4 +1,4 @@
-# Seat Reservation Sytsem
+# Seat Reservation System - C++
 
 Provide the codes to the following program specifications
 
