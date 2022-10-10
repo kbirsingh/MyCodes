@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <!-- Linking the css stylesheet -->
+    <link type="text/css" href="styling/contact-style.css" rel="stylesheet">
+    
+    <script type = "text/javascript">
+        function validateForm() {
+            // first see if name is blank
+            if (document.getElementById('name').value == "") {
+                alert("You must enter name!");
+                document.getElementById('name').focus();
+                return false;
+            }
+            //see if email is blank
+            if (document.getElementById('email').value == "") {
+                alert("You must enter email!");
+                document.getElementById('email').focus();
+                return false;
+            }
+
+            //validate email
+            mail = document.getElementById("email").value
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+               if (reg.test(mail) == false)
+               {
+                    alert('Invalid Email Address!');
+                    document.getElementById('email').focus();
+                    return false;
+               }
+
+            //see if phone is blank
+            if (document.getElementById('phone').value == "") {
+                alert("You must enter phone number!");
+                document.getElementById('phone').focus();
+                return false;
+            }
+
+            // check to see if phone contains an integer
+            x = parseInt(document.getElementById('phone').value);
+            if (isNaN(x)) 
+            {
+                alert("You must enter only integers in phone number");
+                document.getElementById('phone').focus();
+                return false;
+            }
+
+           //see if subject is blank
+            if (document.getElementById('subject').value == "") {
+                alert("You must enter subject!");
+                document.getElementById('subject').focus();
+                return false;
+            }
+            //see if message is blank
+            if (document.getElementById('message').value == "") {
+                alert("You must enter message!");
+                document.getElementById('message').focus();
+                return false;
+            }
+
+            if (window.confirm("Are you sure you want to submit this form"))
+            return true;
+            else
+            return false;
+        }
+        </script>  
+</head>
+    
+<body>
+    
+<div class="navbar">
+    
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" style="padding: 0; margin: 0; margin-right: 44%">
+            <img src="images/logo.png" height="64px" width="100px"></a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Our Services</a>
+        <a href="login.html" style="margin: 0; padding: 13px;">
+            <img src="images/login-avatar.png" height="40px" width="50px"></a>
+    </div>
+    
+</div>
+
+<div class="contact-image">
+    
+    <img src="images/contact-banner.jpg">
+    
+</div>
+    
+<div class="main-block">
+      <div class="left-part">
+          
+            <div class="contact-detail">
+                <img src="images/location_icon.png" style="width: 8%; height: 50px; margin-left: 10%; float: left">
+                <font>British Columbia, Canada</font>
+            </div>
+          
+            <div class="contact-detail">
+                <img src="images/phone-icon.png" style="width: 8%; height: 50px; margin-left: 10%; float: left">
+                <font>+1 4323456784</font>
+            </div>
+          
+            <div class="contact-detail">
+                <img src="images/email-icon.png" style="width: 8%; height: 50px; margin-left: 10%; float: left">
+                <font>example@gmail.com</font>
+            </div>
+          
+      </div>
+    
+      <form name="contForm" onsubmit="return validateForm()" method="post" action="contact_info.php">
+        <h1>Let's Get In Touch....</h1>
+        <div class="info">
+          <input type="text" name="name" placeholder="Full name" id="name">
+          <input type="email" name="email" placeholder="Email" id="email">
+          <input type="text" name="phone" placeholder="Phone number" id="phone">
+          <input type="text" name="subject" placeholder="Subject" id="subject">
+        </div>
+        <p>Message</p>
+        <div>
+          <textarea rows="4" id="message" name="message"></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    
+<footer class="footer">
+  
+    <ul class="footer__nav">
+       
+        <li class="nav__item" style="margin-left: 1%">
+        <h2 class="nav__title">About us</h2>
+            <ul class="nav__ul">
+                <li>
+                    <a href="history.html">History</a>
+                </li>
+                
+                <li>
+                    <a href="mission.html">Mission</a>
+                </li>
+            
+                <li>
+                    <a href="ourteam.html">Our Team</a>
+                </li>
+                
+                <li>
+                    <a href="achievements.html">Achievements</a>
+                </li>
+            </ul>
+        </li>
+    
+        <li class="nav__item " style="margin-left: 20%; text-align: center">
+        <h2 class="nav__title">Products</h2>
+            <ul class="nav__ul">
+                <li>
+                    <a href="store.html">Visit Store</a>
+                </li>
+                
+                <li>
+                    <a href="feedback.html">Products Feedback</a>
+                </li>
+                
+                <li>
+                    <a href="order-form.html">Place Order</a>
+                </li>
+
+            </ul>
+        </li>
+        
+        <li class="nav__item" style="margin-left: 20%; margin-right: 2%; text-align: right">
+        <h2 class="nav__title">Our Services</h2>
+            <ul class="nav__ul">
+                <li>   
+                    <a href="membership-form.html">Membership form</a>
+                </li>
+                
+                <li>
+                    <a href="contact.html">Contact-Us</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+  </ul>
+    
+</footer>
+  
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phone X</title> 
+    <!-- Linking the css stylesheet -->
+    <link type="text/css" href="styling/phonex-style.css" rel="stylesheet">
+    
+    <script type="text/javascript">
+        function myFunction(imgs) {
+          var expandImg = document.getElementById("expandedImg");
+          expandImg.src = imgs.src;
+          expandImg.parentElement.style.display = "block";
+        }
+    </script> 
+</head>
+    
+<body>
+
+<div class="navbar">
+    
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" style="padding: 0; margin: 0; margin-right: 44%">
+            <img src="images/logo.png" height="64px" width="100px"></a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Our Services</a>
+        <a href="login.html" style="margin: 0; padding: 13px;">
+            <img src="images/login-avatar.png" height="40px" width="50px"></a>
+    </div>
+    
+</div>
+    
+<div class="product-detail">
+
+      <div class="product-detail-left">
+          
+           <div class="row">
+              <div class="column">
+                <img src="images/phonex4.jpeg" style="width:100%" onclick="myFunction(this);">
+              </div>
+              <div class="column">
+                <img src="images/phonex1.jpeg" style="width:100%" onclick="myFunction(this);">
+              </div>
+              <div class="column">
+                <img src="images/phonex2.jpeg" style="width:100%" onclick="myFunction(this);">
+              </div>
+              <div class="column">
+                <img src="images/phonex3.jpg" style="width:100%" onclick="myFunction(this);">
+              </div>
+            </div>
+          
+            <div class="container">
+                <img src="images/phonex4.jpeg" id="expandedImg" style="width:100%; border: 5px solid green; height: 550px; padding: 5px; border-radius: 10%;">
+            </div>
+        
+           
+    </div>
+        
+        <div class="product-detail-right">
+            <h3 style="font-size: 40px">Phone X <br><small>Code : GA00006488</small></h3>
+            <h5><b>Price : </b> <i class="fas fa-dollar-sign"></i> $419.99</h5>
+            <h5><b>Warranty : </b> 12 Months</h5>
+            <h5><b>Shipping charges: </b> $9.99</h5>
+            <h5><b>Payment : </b> Cash On Delievery</h5>
+            <h5><b>Availability : </b> in Stock</h5>
+            <a href="order-form.html" class="buynow"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+        </div>
+        
+        <div class="product-detail-feature">
+				<h3>Features</h3>
+				<p>Brand : Mobile X</p>
+				<p>Ram: 8 gb</p>
+				<p>Internal Storage : 128 gb</p>
+				<p>Display : 16.69 cm (6.57 inch)</p>
+				<p>Display Type : Super Amoled</p>
+				<p>Resolution Type : 2k</p>
+				<p>Processor : Qualcomm Snapdragon 855+</p>
+                <p>Primary Clock Speed : 2.96 GHz</p>
+                <p>GPU : Adreno 640 </p>
+				<p>Battery : 4200 mAh</p>
+				<p>Refresh Rate : 90hz</p>
+				<p>Cooling : Liquid Cooling System</p>
+				<p>Operating System : Android 10</p>
+				<p>Primary Camera : 64MP + 8MP + 8MP + 2MP</p>
+				<p>Secondary Camera : 32MP + 8MP Dual Front Camera</p>
+				<p>Recording : Upto 4k(60fps)</p>
+				<p>Optical Image Stabilization : Yes</p>
+				<p>Network Type : 5G, 4G, 3G, 2G</p>
+				<p>Fingerprint: Yes</p>
+				<p>GPRS : Yes</p>
+				<p>Bluetooth Version : v5.0</p>
+				<p>Wi-Fi Version : 802.11 b/g/n/a/ac</p>
+                <p>Width : 75.8 mm</p>
+				<p>Height : 163.8 mm</p>
+				<p>Depth : 9.3 mm</p>
+				<p>Weight : 202 g</p>
+        </div>
+        
+</div>
+    
+<footer class="footer">
+  
+    <ul class="footer__nav">
+       
+        <li class="nav__item" style="margin-left: 1%">
+        <h2 class="nav__title">About us</h2>
+            <ul class="nav__ul">
+                <li>
+                    <a href="history.html">History</a>
+                </li>
+                
+                <li>
+                    <a href="mission.html">Mission</a>
+                </li>
+            
+                <li>
+                    <a href="ourteam.html">Our Team</a>
+                </li>
+                
+                <li>
+                    <a href="achievements.html">Achievements</a>
+                </li>
+            </ul>
+        </li>
+    
+        <li class="nav__item " style="margin-left: 20%; text-align: center">
+        <h2 class="nav__title">Products</h2>
+            <ul class="nav__ul">
+                <li>
+                    <a href="store.html">Visit Store</a>
+                </li>
+                
+                <li>
+                    <a href="feedback.html">Products Feedback</a>
+                </li>
+                
+                <li>
+                    <a href="order-form.html">Place Order</a>
+                </li>
+
+            </ul>
+        </li>
+        
+        <li class="nav__item" style="margin-left: 20%; margin-right: 2%; text-align: right">
+        <h2 class="nav__title">Our Services</h2>
+            <ul class="nav__ul">
+                <li>   
+                    <a href="membership-form.html">Membership form</a>
+                </li>
+                
+                <li>
+                    <a href="contact.html">Contact-Us</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+  </ul>
+    
+</footer>
+  
+</body>
+</html>

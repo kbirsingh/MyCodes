@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Watch X</title>
+    <!-- Linking the css stylesheet -->
+    <link type="text/css" href="styling/watch-style.css" rel="stylesheet">
+    
+    <script type="text/javascript">
+        function myFunction(imgs) {
+          var expandImg = document.getElementById("expandedImg");
+          expandImg.src = imgs.src;
+          expandImg.parentElement.style.display = "block";
+        }
+    </script>
+    
+</head>
+<body>
+
+<div class="navbar">
+    
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" style="padding: 0; margin: 0; margin-right: 44%">
+            <img src="images/logo.png" height="64px" width="100px"></a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Our Services</a>
+        <a href="login.html" style="margin: 0; padding: 13px;">
+            <img src="images/login-avatar.png" height="40px" width="50px"></a>
+    </div>
+    
+</div>
+    
+<div class="product-detail">
+
+      <div class="product-detail-left">
+          
+           <div class="row">
+              <div class="column">
+                <img src="images/card2_image.jpg" style="width:100%" onclick="myFunction(this);">
+              </div>
+              <div class="column">
+                <img src="images/watchx2.jpg" style="width:100%" onclick="myFunction(this);">
+              </div>
+              <div class="column">
+                <img src="images/watchx3.jpg" style="width:100%" onclick="myFunction(this);">
+              </div>
+              <div class="column">
+                <img src="images/watchx4.jpg" style="width:100%" onclick="myFunction(this);">
+              </div>
+            </div>
+          
+            <div class="container">
+                <img src="images/card2_image.jpg" id="expandedImg" style="width:100%; border: 5px solid green; height: 550px; padding: 5px; border-radius: 10%;">
+            </div>
+        
+           
+    </div>
+        
+        <div class="product-detail-right">
+            <h3 style="font-size: 40px">Phone X <br><small>Code : WA00504</small></h3>
+            <h5><b>Price : </b> <i class="fas fa-dollar-sign"></i> $130.00</h5>
+            <h5><b>Warranty : </b> 12 Months</h5>
+            <h5><b>Shipping charges: </b> $4.99</h5>
+            <h5><b>Payment : </b> Cash On Delievery</h5>
+            <h5><b>Availability : </b> in Stock</h5>
+            <a href="order-form.html" class="buynow"><i class="fas fa-shopping-cart"></i> Buy Now</a>
+        </div>
+        
+        <div class="product-detail-feature">
+				<h3>Features</h3>
+				<p>Brand : Mobile X</p>
+				<p>Dial Color: Black</p>
+				<p>Dial Shape : Round</p>
+				<p>Strap Color : Black</p>
+				<p>Strap Material : Silicone</p>
+				<p>Touchscreen : Yes</p>
+				<p>Display Type: OLED</p>
+                <p>Water Resistant : Yes</p>
+                <p>Compatible Operating System : Android 4.3+, iOS 8.2+</p>
+				<p>RAM : 2 gb</p>
+				<p>Internal Memory: 16 gb</p>
+				<p>Processor Speed : 1.2 GHz</p>
+				<p>Display Size : 35mm</p>
+				<p>Thickness  : 11.5 mm</p>
+				<p>Diameter : 45 mm</p>
+				<p>Weight (g) : 54.00</p>
+				<p>Battery Life : Up to 7 full day</p>
+				<p>Battery : 3000 mAh</p>
+                <p>Sensor : Accelerometer, Ambient Light Sensor, Gyroscope</p>
+                <p>Other Sensors : Heart Rate Sensors, Barometric Altimeter</p>
+        </div>
+        
+</div>
+ 
+<footer class="footer">
+  
+    <ul class="footer__nav">
+       
+        <li class="nav__item" style="margin-left: 1%">
+        <h2 class="nav__title">About us</h2>
+            <ul class="nav__ul">
+                <li>
+                    <a href="history.html">History</a>
+                </li>
+                
+                <li>
+                    <a href="mission.html">Mission</a>
+                </li>
+            
+                <li>
+                    <a href="ourteam.html">Our Team</a>
+                </li>
+                
+                <li>
+                    <a href="achievements.html">Achievements</a>
+                </li>
+            </ul>
+        </li>
+    
+        <li class="nav__item " style="margin-left: 20%; text-align: center">
+        <h2 class="nav__title">Products</h2>
+            <ul class="nav__ul">
+                <li>
+                    <a href="store.html">Visit Store</a>
+                </li>
+                
+                <li>
+                    <a href="feedback.html">Products Feedback</a>
+                </li>
+                
+                <li>
+                    <a href="order-form.html">Place Order</a>
+                </li>
+
+            </ul>
+        </li>
+        
+        <li class="nav__item" style="margin-left: 20%; margin-right: 2%; text-align: right">
+        <h2 class="nav__title">Our Services</h2>
+            <ul class="nav__ul">
+                <li>   
+                    <a href="membership-form.html">Membership form</a>
+                </li>
+                
+                <li>
+                    <a href="contact.html">Contact-Us</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+  </ul>
+    
+</footer>
+  
+</body>
+</html>

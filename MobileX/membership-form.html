@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+    <title>Membership</title> 
+     <!-- Linking the css stylesheet -->
+     <link rel="stylesheet" href="styling/membership-style.css" type="text/css">
+     
+    <script type = "text/javascript">
+        function validateForm() {
+            // first see if name is blank
+            if (document.getElementById('name').value == "") {
+                alert("You must enter name in this box!");
+                document.getElementById('name').focus();
+                return false;
+            }
+            //see if email is blank
+            if (document.getElementById('email').value == "") {
+                alert("You must enter email in this box!");
+                document.getElementById('email').focus();
+                return false;
+            }
+
+            //validate email
+            mail = document.getElementById("email").value
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+               if (reg.test(mail) == false)
+               {
+                    alert('Invalid Email Address');
+                    document.getElementById('email').focus();
+                    return false;
+               }
+
+            //see if address is blank
+            if (document.getElementById('address').value == "") {
+                alert("You must enter address in this box!");
+                document.getElementById('address').focus();
+                return false;
+            }
+            //see if city is blank
+            if (document.getElementById('city').value == "") {
+                alert("You must enter city in this box!");
+                document.getElementById('city').focus();
+                return false;
+            }
+            //see if state is blank
+            if (document.getElementById('state').value == "") {
+                alert("You must enter state in this box!");
+                document.getElementById('state').focus();
+                return false;
+            }
+            //see if country is blank
+            if (document.getElementById('country').value == "") {
+                alert("You must enter country in this box!");
+                document.getElementById('country').focus();
+                return false;
+            }
+            //see if zip is blank
+            if (document.getElementById('zip').value == "") {
+                alert("You must enter zip in this box!");
+                document.getElementById('zip').focus();
+                return false;
+            }
+            //see if phone is blank
+            if (document.getElementById('phone').value == "") {
+                alert("You must enter phone number in this box!");
+                document.getElementById('phone').focus();
+                return false;
+            }
+
+            // check to see if phone contains an integer
+            x = parseInt(document.getElementById('phone').value);
+            if (isNaN(x)) 
+            {
+                alert("You must enter only digits in this box!");
+                document.getElementById('phone').focus();
+                return false;
+            }
+
+            //see if bdate is blank
+            if (document.getElementById('bdate').value == "") {
+                alert("You must enter date of birthday in this box!");
+                document.getElementById('bdate').focus();
+                return false;
+            }
+
+            //see if gender radio is selected
+            var gender = document.getElementsByName('gender');
+            var genValue = false;
+
+            for(var i=0; i<gender.length;i++)
+            {
+                if(gender[i].checked == true)
+                {
+                    genValue = true;    
+                }
+            }
+            if(!genValue)
+            {
+                alert("Please Choose the gender");
+                return false;
+            }
+
+
+            if (window.confirm("Are you sure you want to submit this form"))
+            return true;
+            else
+            return false;
+            }
+        </script>   
+</head>
+    
+ <body>
+    
+<div class="navbar">
+    
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" style="padding: 0; margin: 0; margin-right: 44%">
+            <img src="images/logo.png" height="64px" width="100px"></a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Our Services</a>
+        <a href="login.html" style="margin: 0; padding: 13px;">
+            <img src="images/login-avatar.png" height="40px" width="50px"></a>
+    </div>
+    
+</div>
+     
+<div class="testbox">
+      <form name="membForm" onsubmit="return validateForm()" method="post" action="memb_info.php">
+        <div class="banner">
+            <img src="images/membership-banner.png" width="100%" height="300px">
+        </div>
+          <br>
+        <h3>Become a part of Mobile X Family. To become member fill out your details in the form below. Every month two lucky members of our Mobile X family will get a chance to win brand new Phone X Plus.</h3>
+        <div class="item">
+          <label for="name">Name<span>*</span></label><br>
+          <input id="name" type="text" name="name">
+        </div>
+        <div class="item">
+          <label for="email">Email Address<span>*</span></label><br>
+          <input id="email" type="email" name="email">
+        </div>
+        <div class="item">
+          <label for="address">Address<span>*</span></label><br>
+          <input id="address" type="address" name="address">
+        </div>
+        <div class="item">
+          <label for="city">City<span>*</span></label><br>
+          <input id="city" type="text" name="city">
+        </div>
+        <div class="item">
+          <label for="state">State<span>*</span></label><br>
+          <input id="state" type="text" name="state">
+        </div>
+        <div class="item">
+          <label for="country">Country<span>*</span></label><br>
+          <input id="country" type="text" name="country">
+        </div>  
+        <div class="item">
+          <label for="zip">Zip<span>*</span></label><br>
+          <input id="zip" type="text" name="zip">
+        </div>
+        <div class="item">
+          <label for="phone">Phone<span>*</span></label><br>
+          <input id="phone" type="text" name="phone">
+        </div>
+        <div class="item">
+          <label for="bdate">Date of Birth<span>*</span></label><br>
+          <input id="bdate" type="date" name="bdate">
+        </div>
+        <div class="question">
+          <label>Gender</label>
+          <div class="question-answer">
+            <div>
+              <input type="radio" value="male" id="radio_1" name="gender"/>
+              <label for="radio_1" class="radio"><span>Male</span></label>
+            </div>
+            <div>
+              <input type="radio" value="female" id="radio_2" name="gender"/>
+              <label for="radio_2" class="radio"><span>Female</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="btn-block">
+          <button type="submit">SUBMIT</button>
+        </div>
+      </form>
+</div>
+
+<footer class="footer">
+  
+    <ul class="footer__nav">
+       
+        <li class="nav__item" style="margin-left: 1%">
+        <h2 class="nav__title">About us</h2>
+            <ul class="nav__ul">
+                <li>
+                    <a href="history.html">History</a>
+                </li>
+                
+                <li>
+                    <a href="mission.html">Mission</a>
+                </li>
+            
+                <li>
+                    <a href="ourteam.html">Our Team</a>
+                </li>
+                
+                <li>
+                    <a href="achievements.html">Achievements</a>
+                </li>
+            </ul>
+        </li>
+    
+        <li class="nav__item " style="margin-left: 20%; text-align: center">
+        <h2 class="nav__title">Products</h2>
+            <ul class="nav__ul">
+                <li>
+                    <a href="store.html">Visit Store</a>
+                </li>
+                
+                <li>
+                    <a href="feedback.html">Products Feedback</a>
+                </li>
+                
+                <li>
+                    <a href="order-form.html">Place Order</a>
+                </li>
+
+            </ul>
+        </li>
+        
+        <li class="nav__item" style="margin-left: 20%; margin-right: 2%; text-align: right">
+        <h2 class="nav__title">Our Services</h2>
+            <ul class="nav__ul">
+                <li>   
+                    <a href="membership-form.html">Membership form</a>
+                </li>
+                
+                <li>
+                    <a href="contact.html">Contact-Us</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+  </ul>
+    
+</footer>
+   
+</body>      
+</html>

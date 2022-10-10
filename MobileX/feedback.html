@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback</title> 
+    <!-- Linking the css stylesheet -->
+    <link type="text/css" href="styling/feedback-style.css" rel="stylesheet">
+    <script type = "text/javascript">
+        function validateForm() {
+            //see if name is blank
+            if (document.getElementById('name').value == "") {
+                alert("You must enter name in this box!");
+                document.getElementById('name').focus();
+                return false;
+            }
+
+            //1. see if rate radio is selected
+            var rate = document.getElementsByName('rate');
+            var ratValue = false;
+
+            for(var i=0; i<rate.length;i++)
+            {
+                if(rate[i].checked == true)
+                {
+                    ratValue = true;    
+                }
+            }
+            if(!ratValue)
+            {
+                alert("Please answer the first part of feedback form");
+                return false;
+            }
+            
+            //2. see if satisfied radio is selected
+            var satisfied = document.getElementsByName('satisfied');
+            var satValue = false;
+
+            for(var i=0; i<satisfied.length;i++)
+            {
+                if(satisfied[i].checked == true)
+                {
+                    satValue = true;    
+                }
+            }
+            if(!satValue)
+            {
+                alert("Please answer the second part of feedback form");
+                return false;
+            }
+            
+            //3. see if prices radio is selected
+            var prices = document.getElementsByName('prices');
+            var prcValue = false;
+
+            for(var i=0; i<prices.length;i++)
+            {
+                if(prices[i].checked == true)
+                {
+                    prcValue = true;    
+                }
+            }
+            if(!prcValue)
+            {
+                alert("Please answer the third part of feedback form");
+                return false;
+            }
+            
+            //4. see if timeliness radio is selected
+            var timeliness = document.getElementsByName('timeliness');
+            var timValue = false;
+
+            for(var i=0; i<timeliness.length;i++)
+            {
+                if(timeliness[i].checked == true)
+                {
+                    timValue = true;    
+                }
+            }
+            if(!timValue)
+            {
+                alert("Please answer the fourth part of feedback form");
+                return false;
+            }
+            
+            //5. see if support radio is selected
+            var support = document.getElementsByName('support');
+            var supValue = false;
+
+            for(var i=0; i<support.length;i++)
+            {
+                if(support[i].checked == true)
+                {
+                    supValue = true;    
+                }
+            }
+            if(!supValue)
+            {
+                alert("Please answer the fifth part of feedback form");
+                return false;
+            }
+            
+            
+
+            if (window.confirm("Are you sure you want to submit this form"))
+            return true;
+            else
+            return false;
+        }
+        </script>  
+</head>
+    
+<body>
+    
+<div class="navbar">
+    
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" style="padding: 0; margin: 0; margin-right: 44%">
+            <img src="images/logo.png" height="64px" width="100px"></a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Our Services</a>
+        <a href="login.html" style="margin: 0; padding: 13px;">
+            <img src="images/login-avatar.png" height="40px" width="50px"></a>
+    </div>
+    
+</div>
+    
+<div class="testbox">
+ 
+      <form name="feedForm" onsubmit="return validateForm()" method="post" action="feed_info.php">
+        <div class="feedback-image">
+            <img src="images/feedback-banner.png">
+        </div>
+        <h1>Customer Feedback Form</h1>
+        <p>Please take a few minutes to give us feedback about our service by filling in this short Customer Feedback Form. We are conducting this research in order to measure your level of satisfaction with the quality of our service. We thank you for your participation.</p>
+        <hr />
+          <h4>Name *</h4>
+          <input class="name" type="text" name="name" id="name">
+        <h3>Overall experience with our service</h3>
+        <table>
+          <tr>
+            <th class="first-col"></th>
+            <th>Very Good</th>
+            <th>Good</th>
+            <th>Fair</th>
+            <th>Poor</th>
+            <th>Very Poor</th>
+          </tr>
+          <tr>
+            <td class="first-col">How would you rate your overall experience with our service?</td>
+            <td><input type="radio" value="very good" name="rate" id=""></td>
+            <td><input type="radio" value="good" name="rate"></td>
+            <td><input type="radio" value="fair" name="rate"></td>
+            <td><input type="radio" value="poor" name="rate"></td>
+            <td><input type="radio" value="very poor" name="rate"></td>
+          </tr>
+          <tr>
+            <td class="first-col">How satisfied are you with our products?</td>
+            <td><input type="radio" value="very good" name="satisfied"></td>
+            <td><input type="radio" value="good" name="satisfied"></td>
+            <td><input type="radio" value="fair" name="satisfied"></td>
+            <td><input type="radio" value="poor" name="satisfied"></td>
+            <td><input type="radio" value="very poor" name="satisfied"></td>
+          </tr>
+          <tr>
+            <td class="first-col">How would you rate our prices?</td>
+            <td><input type="radio" value="very good" name="prices"></td>
+            <td><input type="radio" value="good" name="prices"></td>
+            <td><input type="radio" value="fair" name="prices"></td>
+            <td><input type="radio" value="poor" name="prices"></td>
+            <td><input type="radio" value="very poor" name="prices"></td>
+          </tr>
+          <tr>
+            <td class="first-col">How satisfied are you with the timeliness of order delivery?</td>
+            <td><input type="radio" value="very good" name="timeliness"></td>
+            <td><input type="radio" value="good" name="timeliness"></td>
+            <td><input type="radio" value="fair" name="timeliness"></td>
+            <td><input type="radio" value="poor" name="timeliness"></td>
+            <td><input type="radio" value="very poor" name="timeliness"></td>
+          </tr>
+          <tr>
+            <td class="first-col">How satisfied are you with the customer support?</td>
+            <td><input type="radio" value="very good" name="support"></td>
+            <td><input type="radio" value="good" name="support"></td>
+            <td><input type="radio" value="fair" name="support"></td>
+            <td><input type="radio" value="poor" name="support"></td>
+            <td><input type="radio" value="very poor" name="support"></td>
+          </tr>
+        </table>
+        <h4>What should we change in order to live up to your expectations?</h4>
+        <textarea rows="5" name="message"></textarea>
+        <h4>Email</h4>
+        <small>Only if you want to hear more from us.</small>
+        <input class="email" type="text" name="email">
+        <div class="btn-block">
+          <button type="submit">Send Feedback</button>
+        </div>
+      </form>
+    </div>
+    
+<footer class="footer">
+  
+    <ul class="footer__nav">
+       
+        <li class="nav__item" style="margin-left: 1%">
+        <h2 class="nav__title">About us</h2>
+            <ul class="nav__ul">
+                <li>
+                    <a href="history.html">History</a>
+                </li>
+                
+                <li>
+                    <a href="mission.html">Mission</a>
+                </li>
+            
+                <li>
+                    <a href="ourteam.html">Our Team</a>
+                </li>
+                
+                <li>
+                    <a href="achievements.html">Achievements</a>
+                </li>
+            </ul>
+        </li>
+    
+        <li class="nav__item " style="margin-left: 20%; text-align: center">
+        <h2 class="nav__title">Products</h2>
+            <ul class="nav__ul">
+                <li>
+                    <a href="store.html">Visit Store</a>
+                </li>
+                
+                <li>
+                    <a href="feedback.html">Products Feedback</a>
+                </li>
+                
+                <li>
+                    <a href="order-form.html">Place Order</a>
+                </li>
+
+            </ul>
+        </li>
+        
+        <li class="nav__item" style="margin-left: 20%; margin-right: 2%; text-align: right">
+        <h2 class="nav__title">Our Services</h2>
+            <ul class="nav__ul">
+                <li>   
+                    <a href="membership-form.html">Membership form</a>
+                </li>
+                
+                <li>
+                    <a href="contact.html">Contact-Us</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+  </ul>
+    
+</footer>
+  
+</body>
+</html>

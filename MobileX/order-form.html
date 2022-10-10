@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Form</title> 
+    <!-- Linking the css stylesheet -->
+    <link type="text/css" href="styling/orderform-style.css" rel="stylesheet">
+    
+    <script type = "text/javascript">
+        function validateForm() {
+            // first see if fname is blank
+            if (document.getElementById('fname').value == "") {
+                alert("You must enter first name in this box!");
+                document.getElementById('fname').focus();
+                return false;
+            }
+            // see if lname is blank
+            if (document.getElementById('lname').value == "") {
+                alert("You must enter last name in this box!");
+                document.getElementById('lname').focus();
+                return false;
+            }    
+            //see if email is blank
+            if (document.getElementById('email').value == "") {
+                alert("You must enter email in this box!");
+                document.getElementById('email').focus();
+                return false;
+            }
+
+            //validate email
+            mail = document.getElementById("email").value
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+               if (reg.test(mail) == false)
+               {
+                    alert('Invalid Email Address');
+                    document.getElementById('email').focus();
+                    return false;
+               }
+
+            //see if address is blank
+            if (document.getElementById('address').value == "") {
+                alert("You must enter address in this box!");
+                document.getElementById('address').focus();
+                return false;
+            }
+            //see if city is blank
+            if (document.getElementById('city').value == "") {
+                alert("You must enter city in this box!");
+                document.getElementById('city').focus();
+                return false;
+            }
+            //see if state is blank
+            if (document.getElementById('state').value == "") {
+                alert("You must enter state in this box!");
+                document.getElementById('state').focus();
+                return false;
+            }
+            //see if country is blank
+            if (document.getElementById('country').value == "") {
+                alert("You must enter country in this box!");
+                document.getElementById('country').focus();
+                return false;
+            }
+            //see if zip is blank
+            if (document.getElementById('zip').value == "") {
+                alert("You must enter zip in this box!");
+                document.getElementById('zip').focus();
+                return false;
+            }
+            //see if phone is blank
+            if (document.getElementById('phone').value == "") {
+                alert("You must enter phone number in this box!");
+                document.getElementById('phone').focus();
+                return false;
+            }
+
+            // check to see if phone contains an integer
+            x = parseInt(document.getElementById('phone').value);
+            if (isNaN(x)) 
+            {
+                alert("You must enter only digits in this box!");
+                document.getElementById('phone').focus();
+                return false;
+            }
+
+            if (window.confirm("Are you sure you want to submit this form"))
+            return true;
+            else
+            return false;
+        }
+        </script> 
+</head>
+    
+<body>
+
+<div class="navbar">
+    
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" style="padding: 0; margin: 0; margin-right: 44%">
+            <img src="images/logo.png" height="64px" width="100px"></a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Our Services</a>
+        <a href="login.html" style="margin: 0; padding: 13px;">
+            <img src="images/login-avatar.png" height="40px" width="50px"></a>
+    </div>
+    
+</div>
+     
+<div class="container">
+    <div class="title">
+        <h2>Product Order Form</h2>
+    </div>
+    <div class="d-flex">
+        <form name="ordForm" onsubmit="return validateForm()" method="post" action="order_info.php">
+        <label>
+        <span>Product <span class="required">*</span></span>
+        <select name="product"  required="">
+            <option value="">Select the product...</option>
+            <option value="Phone X">Phone X</option>
+            <option value="Phone X Plus">Phone X Plus</option>
+            <option value="Watch X">Watch X</option>
+        </select>
+    </label>
+    <label>
+      <span class="fname">First Name <span class="required">*</span></span>
+      <input type="text" name="fname" id="fname">
+    </label>
+    <label>
+      <span class="lname">Last Name <span class="required">*</span></span>
+      <input type="text" name="lname" id="lname">
+    </label>
+    <label>
+      <span>Email Address <span class="required">*</span></span>
+      <input type="email" name="email" id="email"> 
+    </label>
+    <label>
+      <span>Company</span>
+      <input type="text" name="cn" placeholder="Optional">
+    </label>
+    <label>
+      <span>Street Address <span class="required">*</span></span>
+      <input type="text" name="address" placeholder="House number and street name" id="address">
+    </label>
+    <label>
+      <span>Town / City <span class="required">*</span></span>
+      <input type="text" name="city" id="city"> 
+    </label>
+    <label>
+      <span>State <span class="required">*</span></span>
+      <input type="text" name="state" id="state"> 
+    </label>
+    <label>
+      <span>County <span class="required">*</span></span>
+      <input type="text" name="country" id="country"> 
+    </label>
+    <label>
+      <span>Postcode / ZIP <span class="required">*</span></span>
+      <input type="text" name="zip" id="zip"> 
+    </label>
+    <label>
+      <span>Phone <span class="required">*</span></span>
+      <input type="text" name="phone" id="phone"> 
+    </label>
+      <br><br>
+      <input type="radio" name="paymethod" value="Cash on Delievery" checked="checked" /> Cash on Delivery
+      <p>(Sorry, Right Now COD only available)</p><br><br>
+    <button type="submit" class="orderButton">Place Order</button>
+  </form>
+ </div>
+</div>
+
+<footer class="footer">
+  
+    <ul class="footer__nav">
+       
+        <li class="nav__item" style="margin-left: 1%">
+        <h2 class="nav__title">About us</h2>
+            <ul class="nav__ul">
+                <li>
+                    <a href="history.html">History</a>
+                </li>
+                
+                <li>
+                    <a href="mission.html">Mission</a>
+                </li>
+            
+                <li>
+                    <a href="ourteam.html">Our Team</a>
+                </li>
+                
+                <li>
+                    <a href="achievements.html">Achievements</a>
+                </li>
+            </ul>
+        </li>
+    
+        <li class="nav__item " style="margin-left: 20%; text-align: center">
+        <h2 class="nav__title">Products</h2>
+            <ul class="nav__ul">
+                <li>
+                    <a href="store.html">Visit Store</a>
+                </li>
+                
+                <li>
+                    <a href="feedback.html">Products Feedback</a>
+                </li>
+                
+                <li>
+                    <a href="order-form.html">Place Order</a>
+                </li>
+
+            </ul>
+        </li>
+        
+        <li class="nav__item" style="margin-left: 20%; margin-right: 2%; text-align: right">
+        <h2 class="nav__title">Our Services</h2>
+            <ul class="nav__ul">
+                <li>   
+                    <a href="membership-form.html">Membership form</a>
+                </li>
+                
+                <li>
+                    <a href="contact.html">Contact-Us</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+  </ul>
+    
+</footer>
+  
+</body>
+</html>
